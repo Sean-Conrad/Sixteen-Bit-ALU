@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Oct 11 23:20:52 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : SixteenBitAdder
+Top-level Entity Name : SixteenBitAdder
+Family : MAX V
+Device : 5M80ZT100C4
+Timing Models : Final
+Total logic elements : 32 / 80 ( 40 % )
+Total pins : 50 / 79 ( 63 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

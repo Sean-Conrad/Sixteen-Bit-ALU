@@ -1,0 +1,111 @@
+|SixteenBitXor
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+b[0] => b[0].IN4
+b[1] => b[1].IN4
+b[2] => b[2].IN4
+b[3] => b[3].IN4
+b[4] => ~NO_FANOUT~
+b[5] => ~NO_FANOUT~
+b[6] => ~NO_FANOUT~
+b[7] => ~NO_FANOUT~
+b[8] => ~NO_FANOUT~
+b[9] => ~NO_FANOUT~
+b[10] => ~NO_FANOUT~
+b[11] => ~NO_FANOUT~
+b[12] => ~NO_FANOUT~
+b[13] => ~NO_FANOUT~
+b[14] => ~NO_FANOUT~
+b[15] => ~NO_FANOUT~
+Out[0] << FourBitXor:U0.Out
+Out[1] << FourBitXor:U0.Out
+Out[2] << FourBitXor:U0.Out
+Out[3] << FourBitXor:U0.Out
+Out[4] << FourBitXor:U1.Out
+Out[5] << FourBitXor:U1.Out
+Out[6] << FourBitXor:U1.Out
+Out[7] << FourBitXor:U1.Out
+Out[8] << FourBitXor:U2.Out
+Out[9] << FourBitXor:U2.Out
+Out[10] << FourBitXor:U2.Out
+Out[11] << FourBitXor:U2.Out
+Out[12] << FourBitXor:U3.Out
+Out[13] << FourBitXor:U3.Out
+Out[14] << FourBitXor:U3.Out
+Out[15] << FourBitXor:U3.Out
+
+
+|SixteenBitXor|FourBitXor:U0
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixteenBitXor|FourBitXor:U1
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixteenBitXor|FourBitXor:U2
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixteenBitXor|FourBitXor:U3
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

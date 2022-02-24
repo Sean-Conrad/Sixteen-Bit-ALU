@@ -1,0 +1,11 @@
+|FullAdder
+a => W[0].IN0
+a => W[1].IN0
+b => W[0].IN1
+b => W[1].IN1
+cin => W.IN1
+cin => W[3].IN1
+Cout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+

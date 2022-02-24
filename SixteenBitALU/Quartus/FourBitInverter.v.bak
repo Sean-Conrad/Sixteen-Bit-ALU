@@ -1,0 +1,10 @@
+module FourBitInverter(a, Out);
+	input [3:0] a;
+	output [3:0] Out;
+	wire [3:0] W;
+	Inverter I0 (.a(a[0]), .Out(W[0]));
+	Inverter I1 (.a(a[1]), .Out(W[1]));
+	Inverter I2 (.a(a[2]), .Out(W[2]));
+	Inverter I3 (.a(a[3]), .Out(W[3]));
+	assign Out[3:0] = a[3:0];
+endmodule

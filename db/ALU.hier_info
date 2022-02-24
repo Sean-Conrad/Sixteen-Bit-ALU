@@ -1,0 +1,1118 @@
+|ALU
+op[0] => Equal0.IN1
+op[0] => Equal1.IN0
+op[0] => Equal2.IN1
+op[0] => Equal3.IN1
+op[0] => Equal4.IN0
+op[0] => Equal5.IN1
+op[1] => Equal0.IN0
+op[1] => Equal1.IN1
+op[1] => Equal2.IN0
+op[1] => Equal3.IN0
+op[1] => Equal4.IN1
+op[1] => Equal5.IN0
+a[0] => a[0].IN4
+a[1] => a[1].IN4
+a[2] => a[2].IN4
+a[3] => a[3].IN4
+a[4] => a[4].IN4
+a[5] => a[5].IN4
+a[6] => a[6].IN4
+a[7] => a[7].IN4
+a[8] => a[8].IN4
+a[9] => a[9].IN4
+a[10] => a[10].IN4
+a[11] => a[11].IN4
+a[12] => a[12].IN4
+a[13] => a[13].IN4
+a[14] => a[14].IN4
+a[15] => a[15].IN4
+b[0] => b[0].IN3
+b[1] => b[1].IN3
+b[2] => b[2].IN3
+b[3] => b[3].IN3
+b[4] => b[4].IN3
+b[5] => b[5].IN3
+b[6] => b[6].IN3
+b[7] => b[7].IN3
+b[8] => b[8].IN3
+b[9] => b[9].IN3
+b[10] => b[10].IN3
+b[11] => b[11].IN3
+b[12] => b[12].IN3
+b[13] => b[13].IN3
+b[14] => b[14].IN3
+b[15] => b[15].IN3
+Out[0] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[7] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[8] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[9] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[10] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[11] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[12] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[13] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[14] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Out[15] <= Out.DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+cin => cin.IN1
+Cout <= FourBitAdder:FA3.Cout
+Sum[0] <= FourBitAdder:FA0.Sum
+Sum[1] <= FourBitAdder:FA0.Sum
+Sum[2] <= FourBitAdder:FA0.Sum
+Sum[3] <= FourBitAdder:FA0.Sum
+Sum[4] <= FourBitAdder:FA1.Sum
+Sum[5] <= FourBitAdder:FA1.Sum
+Sum[6] <= FourBitAdder:FA1.Sum
+Sum[7] <= FourBitAdder:FA1.Sum
+Sum[8] <= FourBitAdder:FA2.Sum
+Sum[9] <= FourBitAdder:FA2.Sum
+Sum[10] <= FourBitAdder:FA2.Sum
+Sum[11] <= FourBitAdder:FA2.Sum
+Sum[12] <= FourBitAdder:FA3.Sum
+Sum[13] <= FourBitAdder:FA3.Sum
+Sum[14] <= FourBitAdder:FA3.Sum
+Sum[15] <= FourBitAdder:FA3.Sum
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA0|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA0|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA0|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA0|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA1|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA1|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA1|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA1|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA2|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA2|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA2|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA2|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA3|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA3|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA3|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitAdder:A|FourBitAdder:FA3|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+bin => bin.IN1
+Bout <= FourBitSubtractor:FS3.Bout
+Diff[0] <= FourBitSubtractor:FS0.Diff
+Diff[1] <= FourBitSubtractor:FS0.Diff
+Diff[2] <= FourBitSubtractor:FS0.Diff
+Diff[3] <= FourBitSubtractor:FS0.Diff
+Diff[4] <= FourBitSubtractor:FS1.Diff
+Diff[5] <= FourBitSubtractor:FS1.Diff
+Diff[6] <= FourBitSubtractor:FS1.Diff
+Diff[7] <= FourBitSubtractor:FS1.Diff
+Diff[8] <= FourBitSubtractor:FS2.Diff
+Diff[9] <= FourBitSubtractor:FS2.Diff
+Diff[10] <= FourBitSubtractor:FS2.Diff
+Diff[11] <= FourBitSubtractor:FS2.Diff
+Diff[12] <= FourBitSubtractor:FS3.Diff
+Diff[13] <= FourBitSubtractor:FS3.Diff
+Diff[14] <= FourBitSubtractor:FS3.Diff
+Diff[15] <= FourBitSubtractor:FS3.Diff
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+bin => bin.IN1
+Bout <= FullSubtractor:Fs3.Bout
+Diff[0] <= FullSubtractor:Fs0.Diff
+Diff[1] <= FullSubtractor:Fs1.Diff
+Diff[2] <= FullSubtractor:Fs2.Diff
+Diff[3] <= FullSubtractor:Fs3.Diff
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS0|FullSubtractor:Fs0
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS0|FullSubtractor:Fs1
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS0|FullSubtractor:Fs2
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS0|FullSubtractor:Fs3
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+bin => bin.IN1
+Bout <= FullSubtractor:Fs3.Bout
+Diff[0] <= FullSubtractor:Fs0.Diff
+Diff[1] <= FullSubtractor:Fs1.Diff
+Diff[2] <= FullSubtractor:Fs2.Diff
+Diff[3] <= FullSubtractor:Fs3.Diff
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS1|FullSubtractor:Fs0
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS1|FullSubtractor:Fs1
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS1|FullSubtractor:Fs2
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS1|FullSubtractor:Fs3
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+bin => bin.IN1
+Bout <= FullSubtractor:Fs3.Bout
+Diff[0] <= FullSubtractor:Fs0.Diff
+Diff[1] <= FullSubtractor:Fs1.Diff
+Diff[2] <= FullSubtractor:Fs2.Diff
+Diff[3] <= FullSubtractor:Fs3.Diff
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS2|FullSubtractor:Fs0
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS2|FullSubtractor:Fs1
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS2|FullSubtractor:Fs2
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS2|FullSubtractor:Fs3
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+bin => bin.IN1
+Bout <= FullSubtractor:Fs3.Bout
+Diff[0] <= FullSubtractor:Fs0.Diff
+Diff[1] <= FullSubtractor:Fs1.Diff
+Diff[2] <= FullSubtractor:Fs2.Diff
+Diff[3] <= FullSubtractor:Fs3.Diff
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS3|FullSubtractor:Fs0
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS3|FullSubtractor:Fs1
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS3|FullSubtractor:Fs2
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitSubtractor:S|FourBitSubtractor:FS3|FullSubtractor:Fs3
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+cin => cin.IN1
+Cout <= SixteenBitAdder:A0.Cout
+Sum[0] <= SixteenBitAdder:A0.Sum
+Sum[1] <= SixteenBitAdder:A0.Sum
+Sum[2] <= SixteenBitAdder:A0.Sum
+Sum[3] <= SixteenBitAdder:A0.Sum
+Sum[4] <= SixteenBitAdder:A0.Sum
+Sum[5] <= SixteenBitAdder:A0.Sum
+Sum[6] <= SixteenBitAdder:A0.Sum
+Sum[7] <= SixteenBitAdder:A0.Sum
+Sum[8] <= SixteenBitAdder:A0.Sum
+Sum[9] <= SixteenBitAdder:A0.Sum
+Sum[10] <= SixteenBitAdder:A0.Sum
+Sum[11] <= SixteenBitAdder:A0.Sum
+Sum[12] <= SixteenBitAdder:A0.Sum
+Sum[13] <= SixteenBitAdder:A0.Sum
+Sum[14] <= SixteenBitAdder:A0.Sum
+Sum[15] <= SixteenBitAdder:A0.Sum
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitInverter:I0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+Out[0] <= FourBitInverter:I0.Out
+Out[1] <= FourBitInverter:I0.Out
+Out[2] <= FourBitInverter:I0.Out
+Out[3] <= FourBitInverter:I0.Out
+Out[4] <= FourBitInverter:I1.Out
+Out[5] <= FourBitInverter:I1.Out
+Out[6] <= FourBitInverter:I1.Out
+Out[7] <= FourBitInverter:I1.Out
+Out[8] <= FourBitInverter:I2.Out
+Out[9] <= FourBitInverter:I2.Out
+Out[10] <= FourBitInverter:I2.Out
+Out[11] <= FourBitInverter:I2.Out
+Out[12] <= FourBitInverter:I3.Out
+Out[13] <= FourBitInverter:I3.Out
+Out[14] <= FourBitInverter:I3.Out
+Out[15] <= FourBitInverter:I3.Out
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitInverter:I0|FourBitInverter:I0
+a[0] => Out[0].DATAIN
+a[1] => Out[1].DATAIN
+a[2] => Out[2].DATAIN
+a[3] => Out[3].DATAIN
+Out[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitInverter:I0|FourBitInverter:I1
+a[0] => Out[0].DATAIN
+a[1] => Out[1].DATAIN
+a[2] => Out[2].DATAIN
+a[3] => Out[3].DATAIN
+Out[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitInverter:I0|FourBitInverter:I2
+a[0] => Out[0].DATAIN
+a[1] => Out[1].DATAIN
+a[2] => Out[2].DATAIN
+a[3] => Out[3].DATAIN
+Out[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitInverter:I0|FourBitInverter:I3
+a[0] => Out[0].DATAIN
+a[1] => Out[1].DATAIN
+a[2] => Out[2].DATAIN
+a[3] => Out[3].DATAIN
+Out[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+cin => cin.IN1
+Cout <= FourBitAdder:FA3.Cout
+Sum[0] <= FourBitAdder:FA0.Sum
+Sum[1] <= FourBitAdder:FA0.Sum
+Sum[2] <= FourBitAdder:FA0.Sum
+Sum[3] <= FourBitAdder:FA0.Sum
+Sum[4] <= FourBitAdder:FA1.Sum
+Sum[5] <= FourBitAdder:FA1.Sum
+Sum[6] <= FourBitAdder:FA1.Sum
+Sum[7] <= FourBitAdder:FA1.Sum
+Sum[8] <= FourBitAdder:FA2.Sum
+Sum[9] <= FourBitAdder:FA2.Sum
+Sum[10] <= FourBitAdder:FA2.Sum
+Sum[11] <= FourBitAdder:FA2.Sum
+Sum[12] <= FourBitAdder:FA3.Sum
+Sum[13] <= FourBitAdder:FA3.Sum
+Sum[14] <= FourBitAdder:FA3.Sum
+Sum[15] <= FourBitAdder:FA3.Sum
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA0|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA0|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA0|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA0|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA1|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA1|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA1|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA1|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA2|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA2|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA2|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA2|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+Cout <= FullAdder:Fv3.Cout
+Sum[0] <= FullAdder:Fv0.Sum
+Sum[1] <= FullAdder:Fv1.Sum
+Sum[2] <= FullAdder:Fv2.Sum
+Sum[3] <= FullAdder:Fv3.Sum
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA3|FullAdder:Fv0
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA3|FullAdder:Fv1
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA3|FullAdder:Fv2
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitTwosComp:T|SixteenBitAdder:A0|FourBitAdder:FA3|FullAdder:Fv3
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+Cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitXor:X
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+b[0] => b[0].IN4
+b[1] => b[1].IN4
+b[2] => b[2].IN4
+b[3] => b[3].IN4
+b[4] => ~NO_FANOUT~
+b[5] => ~NO_FANOUT~
+b[6] => ~NO_FANOUT~
+b[7] => ~NO_FANOUT~
+b[8] => ~NO_FANOUT~
+b[9] => ~NO_FANOUT~
+b[10] => ~NO_FANOUT~
+b[11] => ~NO_FANOUT~
+b[12] => ~NO_FANOUT~
+b[13] => ~NO_FANOUT~
+b[14] => ~NO_FANOUT~
+b[15] => ~NO_FANOUT~
+Out[0] <= FourBitXor:FX0.Out
+Out[1] <= FourBitXor:FX0.Out
+Out[2] <= FourBitXor:FX0.Out
+Out[3] <= FourBitXor:FX0.Out
+Out[4] <= FourBitXor:FX1.Out
+Out[5] <= FourBitXor:FX1.Out
+Out[6] <= FourBitXor:FX1.Out
+Out[7] <= FourBitXor:FX1.Out
+Out[8] <= FourBitXor:FX2.Out
+Out[9] <= FourBitXor:FX2.Out
+Out[10] <= FourBitXor:FX2.Out
+Out[11] <= FourBitXor:FX2.Out
+Out[12] <= FourBitXor:FX3.Out
+Out[13] <= FourBitXor:FX3.Out
+Out[14] <= FourBitXor:FX3.Out
+Out[15] <= FourBitXor:FX3.Out
+
+
+|ALU|SixteenBitXor:X|FourBitXor:FX0
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitXor:X|FourBitXor:FX1
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitXor:X|FourBitXor:FX2
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|SixteenBitXor:X|FourBitXor:FX3
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,15 @@
+|FourBitXor
+a[0] => comb.IN0
+a[1] => comb.IN0
+a[2] => comb.IN0
+a[3] => comb.IN0
+b[0] => comb.IN1
+b[1] => comb.IN1
+b[2] => comb.IN1
+b[3] => comb.IN1
+Out[0] << comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] << comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] << comb.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] << comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

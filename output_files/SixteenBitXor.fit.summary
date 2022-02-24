@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Oct 14 19:14:32 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : SixteenBitXor
+Top-level Entity Name : SixteenBitXor
+Family : MAX V
+Device : 5M80ZT100C4
+Timing Models : Final
+Total logic elements : 16 / 80 ( 20 % )
+Total pins : 48 / 79 ( 61 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

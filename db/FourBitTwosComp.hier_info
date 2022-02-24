@@ -1,0 +1,57 @@
+|FourBitTwosComp
+a[0] => A[0].IN1
+a[1] => A[1].IN1
+a[2] => A[2].IN1
+a[3] => A[3].IN1
+cin => cin.IN1
+Sum[0] <= FullAdder:U0.Sum
+Sum[1] <= FullAdder:U1.Sum
+Sum[2] <= FullAdder:U2.Sum
+Sum[3] <= FullAdder:U3.Sum
+Cout <= FullAdder:U3.Cout
+
+
+|FourBitTwosComp|FullAdder:U0
+a => W[0].IN0
+a => W[1].IN0
+b => W[0].IN1
+b => W[1].IN1
+cin => W.IN1
+cin => W[3].IN1
+Cout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitTwosComp|FullAdder:U1
+a => W[0].IN0
+a => W[1].IN0
+b => W[0].IN1
+b => W[1].IN1
+cin => W.IN1
+cin => W[3].IN1
+Cout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitTwosComp|FullAdder:U2
+a => W[0].IN0
+a => W[1].IN0
+b => W[0].IN1
+b => W[1].IN1
+cin => W.IN1
+cin => W[3].IN1
+Cout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitTwosComp|FullAdder:U3
+a => W[0].IN0
+a => W[1].IN0
+b => W[0].IN1
+b => W[1].IN1
+cin => W.IN1
+cin => W[3].IN1
+Cout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Sum <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+

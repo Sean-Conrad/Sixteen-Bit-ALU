@@ -1,0 +1,10 @@
+module FourBitTwosComp (a, cin, Sum, Cout);
+
+	input [3:0] a;
+	input cin;
+	output [3:0] Sum;
+	output Cout;
+	wire [3:0] Z;
+	wire [3:0] W;
+	
+	

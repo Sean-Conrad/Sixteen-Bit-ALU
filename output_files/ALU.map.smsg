@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at ALU.v(4): object "a" differs only in case from object "A" in the same scope File: C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ALU.v Line: 4
+Info (10281): Verilog HDL Declaration information at ALU.v(164): object "a" differs only in case from object "A" in the same scope File: C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ALU.v Line: 164

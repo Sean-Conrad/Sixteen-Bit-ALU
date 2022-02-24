@@ -1,0 +1,340 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vALU
+Z0 !s110 1634268291
+!i10b 1
+!s100 :0aEUAj=MjXl8BN=WAQY40
+IHRKUCd47?O0P_j2^ajllH2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ModelSim
+Z3 w1634267683
+Z4 8C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ModelSim/ALU_tb.v
+Z5 FC:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ModelSim/ALU_tb.v
+L0 3
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1634268291.000000
+Z8 !s107 C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ModelSim/ALU_tb.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ModelSim/ALU_tb.v|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@a@l@u
+vALU_tb
+R0
+!i10b 1
+!s100 S8Y7`_U6A:z?D4LS^=JZ50
+Idhm9<m_?_Ib6emSGGOc``2
+R1
+R2
+R3
+R4
+R5
+L0 184
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@a@l@u_tb
+vFourBitAdder
+R0
+!i10b 1
+!s100 4zn<m>^gecVHZ;O?kdHnT0
+IzLNGoi:_@79dQSgabQcEI1
+R1
+R2
+R3
+R4
+R5
+L0 47
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@four@bit@adder
+vFourBitInverter
+R0
+!i10b 1
+!s100 mHnKG7CZ4gmO3ohzBOV]k2
+IE;<]NWP_h7F^k[afMl<P[1
+R1
+R2
+R3
+R4
+R5
+L0 148
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@four@bit@inverter
+vFourBitSubtractor
+R0
+!i10b 1
+!s100 mY3Z5B:jC182LhfI>@il:2
+IeB<:`KKEZ_zJ=hG5P@]Gg0
+R1
+R2
+R3
+R4
+R5
+L0 93
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@four@bit@subtractor
+vFourBitTwosComp
+!s110 1634256053
+!i10b 1
+!s100 8bnFmWWdD`ZlzI5kiK:To1
+Il@FOQkBc[30_3z=iVdi9X3
+R1
+R2
+w1634098704
+8C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ALU.v
+FC:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ALU.v
+L0 130
+R6
+r1
+!s85 0
+31
+!s108 1634256052.000000
+!s107 C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/bboys/Documents/School Work/FALL 21/ECE 465/Project 1/ALU.v|
+!i113 1
+R10
+R11
+n@four@bit@twos@comp
+vFourBitXor
+R0
+!i10b 1
+!s100 LPSPoGNd8m]mjCEaO1n<K2
+Im<I>kjXlD9ez1ccajM[GN0
+R1
+R2
+R3
+R4
+R5
+L0 170
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@four@bit@xor
+vFullAdder
+R0
+!i10b 1
+!s100 J73YRE:JN]Gz_8P@z2_AL0
+I]^W9>^IFV`m@0R01AfOo21
+R1
+R2
+R3
+R4
+R5
+L0 62
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@full@adder
+vFullSubtractor
+R0
+!i10b 1
+!s100 Zb3`[eDb<B^kZ1hJC<Ub61
+IcXoV3oLol_oaHHTM<o6W51
+R1
+R2
+R3
+R4
+R5
+L0 108
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@full@subtractor
+vInverter
+!s110 1634255246
+!i10b 1
+!s100 i1=Xkla0hC=W4fDFfC>bI2
+IBV[MgDG4aZ>l5H^`VX[io0
+R1
+R2
+w1634255243
+8C:\Users\bboys\Documents\School Work\FALL 21\ECE 465\Project 1\ModelSim\ALU_tb.v
+FC:\Users\bboys\Documents\School Work\FALL 21\ECE 465\Project 1\ModelSim\ALU_tb.v
+L0 151
+R6
+r1
+!s85 0
+31
+!s108 1634255246.000000
+!s107 C:\Users\bboys\Documents\School Work\FALL 21\ECE 465\Project 1\ModelSim\ALU_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\bboys\Documents\School Work\FALL 21\ECE 465\Project 1\ModelSim\ALU_tb.v|
+!i113 1
+R10
+R11
+n@inverter
+vSixteenBitAdder
+R0
+!i10b 1
+!s100 bCVoNXgcPPcY?7eLRX?K`3
+IZX_oLOTHHcAhoN>4FT41d1
+R1
+R2
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@sixteen@bit@adder
+vSixteenBitInverter
+R0
+!i10b 1
+!s100 D;<^D`MblR9GlV[E<T4hA2
+INEl8[P8[B5_^`Mk4ePWBm1
+R1
+R2
+R3
+R4
+R5
+L0 138
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@sixteen@bit@inverter
+vSixteenBitSubtractor
+R0
+!i10b 1
+!s100 IcMk3NIIliblQZ6K<[81X0
+IXH7meAeMFnnl;<WUoBBfh3
+R1
+R2
+R3
+R4
+R5
+L0 78
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@sixteen@bit@subtractor
+vSixteenBitTwosComp
+R0
+!i10b 1
+!s100 c2HL195>f7b]T4ckZoIHb0
+I:zX26>azA`@S52;CDj5>c2
+R1
+R2
+R3
+R4
+R5
+L0 125
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@sixteen@bit@twos@comp
+vSixteenBitXor
+R0
+!i10b 1
+!s100 8bjDVlHR_Ji5@`eLUkWfe0
+IS>UF>VJ_8Qg?F^ZY^^E=51
+R1
+R2
+R3
+R4
+R5
+L0 158
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@sixteen@bit@xor

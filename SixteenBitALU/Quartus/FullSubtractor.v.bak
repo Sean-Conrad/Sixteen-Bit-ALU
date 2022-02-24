@@ -1,0 +1,13 @@
+module FullSubtractor(a, b, bin, Bout, Diff);
+
+	input [3:0] a;
+	input [3:0] b;
+	input bin;
+	output [3:0] Diff;
+	output Bout;
+	
+	assign {Bout, Diff} = a - b - bin;
+
+	
+	
+endmodule

@@ -1,0 +1,13 @@
+|FullSubtractor
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+

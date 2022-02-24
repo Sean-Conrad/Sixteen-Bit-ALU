@@ -1,0 +1,65 @@
+module practice (op, a, b, O, Co);
+	input [15:0] a; 
+	input [15:0] b;
+   input	[1:0] op;
+	output [15: 0]O;
+	output Co;
+	reg Q;
+	wire [15:0]W;
+	wire C;
+
+	SixteenBitAdder A(.a(a[15:0]), .b(b[15:0]), .Cout(C), .Sum(W[15:0]))
+	
+	assign I1 = a^b;
+	assign Ic = a&b;
+		
+	assign O[15:0] = ({op[1],op[0]} == 2'b00) ? W[15:0] :
+		({op[1],op[0]} == 2'b01) ? a&b :
+		({op[1],op[0]} == 2'b10) ? a^b :
+		({op[1],op[0]} == 2'b11) ? a~^b: 1'bx ;
+		
+	assign Co = ({op[1],op[0]} == 2'b00) ? C :
+		({op[1],op[0]} == 2'b01) ? Ic :
+		({op[1],op[0]} == 2'b10) ? Ic :
+		({op[1],op[0]} == 2'b11) ? Ic: 1'bx ;		
+		
+
+endmodule
+
+
+
+module SixteenBitAdder (a, b, cin, Cout, Sum);
+	
+	input [15:0] a;
+	input [15:0] b;
+	input cin;
+	output [15:0] Sum;
+	output Cout;
+	wire [15:0] Z;
+	wire [3:0] W;
+	
+
+	FullAdder U0(.a(a[3:0]), .b(b[3:0]), .cin(cin), .Cout(W[0]), .Sum(Z[3:0]));
+	FullAdder U1(.a(a[7:4]), .b(b[7:4]), .cin(W[0]), .Cout(W[1]), .Sum(Z[7:4])); 
+	FullAdder U2(.a(a[11:8]), .b(b[11:8]), .cin(W[1]), .Cout(W[2]), .Sum(Z[11:8])); 
+	FullAdder U3(.a(a[15:12]), .b(b[15:12]), .cin(W[2]), .Cout(W[3]), .Sum(Z[15:12]));
+	
+	assign Sum[15:0] = Z[15:0];
+	assign Cout = W[3];
+	
+	
+endmodule
+
+module FullAdder(a, b, cin, Cout, Sum);
+
+	input [3:0] a;
+	input [3:0] b;
+	input cin;
+	output [3:0] Sum;
+	output Cout;
+	
+	assign {Cout, Sum} = a + b + cin;
+
+	
+	
+endmodule	

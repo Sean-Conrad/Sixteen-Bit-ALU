@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Oct 14 18:43:28 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : SixteenBitInverter
+Top-level Entity Name : SixteenBitInverter
+Family : MAX V
+Device : 5M40ZE64C4
+Timing Models : Final
+Total logic elements : 0 / 40 ( 0 % )
+Total pins : 32 / 54 ( 59 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

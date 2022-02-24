@@ -1,0 +1,11 @@
+|FourBitInverter
+a[0] => Out[0].DATAIN
+a[1] => Out[1].DATAIN
+a[2] => Out[2].DATAIN
+a[3] => Out[3].DATAIN
+Out[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,69 @@
+|FourBitSubtractor
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+bin => bin.IN1
+Bout <= FullSubtractor:U3.Bout
+Diff[0] <= FullSubtractor:U0.Diff
+Diff[1] <= FullSubtractor:U1.Diff
+Diff[2] <= FullSubtractor:U2.Diff
+Diff[3] <= FullSubtractor:U3.Diff
+
+
+|FourBitSubtractor|FullSubtractor:U0
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitSubtractor|FullSubtractor:U1
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitSubtractor|FullSubtractor:U2
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitSubtractor|FullSubtractor:U3
+a => W[0].IN0
+a => W[4].IN1
+b => W[0].IN1
+b => W[1].IN0
+b => W[3].IN0
+bin => W[1].IN1
+bin => W.IN1
+bin => W[3].IN1
+Bout <= W.DB_MAX_OUTPUT_PORT_TYPE
+Diff <= W.DB_MAX_OUTPUT_PORT_TYPE
+
+
