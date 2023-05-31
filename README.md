@@ -1,3 +1,6 @@
+# SIXTEEN BIT ARITHMETIC LOGIC UNIT
+
+This is an Arithmetic Logic Unit that performs logical operations ADD, SUB, 2's Comp, and XOR written in Verilog using Quartus Pro.
 
 ## Abstraction for Sixteen Bit ALU
 
